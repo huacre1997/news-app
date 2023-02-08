@@ -1,7 +1,5 @@
-import { HeaderNews } from '../components/HeaderNews'
+import { TopNews } from "../components/TopNews/TopNews";
 
 export const Home = () => {
-  return (
-    <HeaderNews/>
-  )
-}
+  return <TopNews />;
+};
