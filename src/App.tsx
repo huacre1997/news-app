@@ -2,7 +2,7 @@ import Detail from "./pages/Detail"
 import Home from "./pages/Home"
 import Search from "./pages/Search"
 import { BrowserRouter, Routes, Route, Outlet, Link, useNavigate } from 'react-router-dom'
-
+import "./index.css"
 function App() {
   return (
     <BrowserRouter>
