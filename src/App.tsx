@@ -1,10 +1,17 @@
-import { Home } from "./views/Home"
-
+import Detail from "./pages/Detail"
+import Home from "./pages/Home"
+import Search from "./pages/Search"
+import { BrowserRouter, Routes, Route, Outlet, Link, useNavigate } from 'react-router-dom'
+import "./index.css"
 function App() {
   return (
-    <>
-      <Home/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='search' element={<Search />}></Route>
+        <Route path=':id' element={<Detail />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
