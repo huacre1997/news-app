@@ -1,8 +1,10 @@
 import { FC, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import { TopNewsItem } from "./TopNewsItem";
 
-export const TopNews: FC = () => {
-  const ApiToken = "";
+export const TopNews = () => {
+  const ApiToken = " ";
   const { data } = useFetch(
     `https://api.thenewsapi.com/v1/news/top?api_token=${ApiToken}&locale=us&limit=3`
   );
@@ -13,22 +15,16 @@ export const TopNews: FC = () => {
   }, [data]);
 
   return (
-    <div className="container">
-      <div className="topNews">
-        {news.map(({ uuid, title, image_url, categories }) => (
-          <div className="topNews__content" key={uuid}>
-            <img
-              className="topNews__content--image"
-              src={image_url}
-              alt={title}
-            />
-            <div className="topNews__content--info">
-              <span>{categories[0]}</span>
-              <h3>{title}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <section className="topNews">
+      {news.map(({ uuid, title, image_url, categories }) => (
+        <TopNewsItem
+          key={uuid}
+          id={uuid}
+          title={title}
+          image_url={image_url}
+          categories={categories}
+        />
+      ))}
+    </section>
   );
 };
