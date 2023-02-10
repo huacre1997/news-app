@@ -1,5 +1,9 @@
+//Tailwind Settings
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 //UI Settings
-@import './base/settings';
-@import './base/styles';
+@import "./base/settings";
+@import "./base/styles";
 //Components
-@import './components/topNews';
+@import "./components/topNews";

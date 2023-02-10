@@ -1,11 +1,8 @@
-import React from 'react'
+import { useParams } from "react-router-dom";
 
-type Props = {}
+const Detail = () => {
+  const { id } = useParams();
+  return <div>Detail {id} </div>;
+};
 
-const Detail = (props: Props) => {
-    return (
-        <div>Detail</div>
-    )
-}
-
-export default Detail
+export default Detail;

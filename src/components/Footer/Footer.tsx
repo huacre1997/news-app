@@ -5,7 +5,7 @@ type Props = {}
 const Footer = (props: Props) => {
     return (
         <>
-            <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900 absolute bottom-0 w-full">
+            <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900 relative bottom-0 w-full">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
